@@ -4,11 +4,11 @@ Sistem deteksi dini kebakaran hutan dan lahan (karhutla) berbasis IoT, dibuat da
 
 > Samsung Innovation Campus Batch 8, Selection Phase 2: IoT Device and Hardware Discovery
 
-- **Team:** [Nama Team]
-- **Anggota:** [Nama 1], [Nama 2], [Nama 3]
-- **Institusi:** [Nama sekolah atau universitas]
-- **Proyek Wokwi:** [tempel link Wokwi]
-- **Video demo:** [tempel link video]
+- **Team:** SemangkukMieAyam
+- **Anggota:** Cetta Ananta Maulana, Muhammad Emir Tajli Putra, Prasetyo Aji Nursiam, Naufal Allam Taqi
+- **Institusi:** IPB University
+- **Proyek Wokwi:** https://wokwi.com/projects/478932320462870529
+- **Video demo:** 
 
 ## Latar belakang singkat
 
