@@ -3,7 +3,7 @@
 // ============================================================================
 #define BLYNK_TEMPLATE_ID   "TMPL6wNsf5Xrq"
 #define BLYNK_TEMPLATE_NAME "Rainforest Guard"
-#define BLYNK_AUTH_TOKEN    "JLCjtJoEqwkS8rOZ4tTwFHBEhYIIGxwE"
+#define BLYNK_AUTH_TOKEN    "[Credential]"
 #define BLYNK_PRINT Serial
 
 #include <Wire.h>
@@ -31,7 +31,7 @@ const int   mqtt_port   = 1883;
 #define MQTT_CLIENT_ID  "rfg_cetta_gateway_01"
 
 // ================= TELEGRAM =================
-const char* BOT_TOKEN = "9289765418:AAHJ8R82VT3kp2hcWCW8znyq1JqNkJS8ioE";
+const char* BOT_TOKEN = "[credential]";
 const int LONGPOLL_S = 2;           
 #define MAX_SUB 20
 
