@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "author": "Karhutla IoT Team",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -252.6, "left": -102.8, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 4.7, "left": 4.6, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_soil_1",
+      "top": -327.7,
+      "left": 643,
+      "attrs": { "label": "Soil Node 1" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -335.7, "left": 561, "attrs": {} },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "mpu1",
+      "top": -314.42,
+      "left": 462.88,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": 303.6,
+      "left": -15.4,
+      "attrs": { "color": "green", "label": "AMAN" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_yellow",
+      "top": 361.2,
+      "left": -15.4,
+      "attrs": { "color": "yellow", "label": "WASPADA" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": 418.8,
+      "left": -15.4,
+      "attrs": { "color": "red", "label": "BAHAYA/KRITIS" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 357.6,
+      "left": 49.8,
+      "attrs": { "volume": "0.3" }
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "gas1",
+      "top": -311.2,
+      "left": 694.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_soil_3",
+      "top": -375.7,
+      "left": -461,
+      "attrs": { "label": "Soil Node 2" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht3",
+      "top": -383.7,
+      "left": -543,
+      "attrs": { "temperature": "25.6" }
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "gas3",
+      "top": -359.2,
+      "left": -409.9,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "mpu3",
+      "top": -362.42,
+      "left": -641.12,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 254.4,
+      "left": -96.55,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 254.4,
+      "left": -106.15,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 254.4,
+      "left": -115.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -654.8, "left": 566.4, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": -653.8,
+      "left": -545.4,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 262.34,
+      "left": 38.63,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 268.8,
+      "left": 153.6,
+      "attrs": {
+        "text": "N = Node\nK = % Kekeringan tanah\nT = Temperatur udara (Celcius)\nG = Gas (belum fine tuned)\nSPR = Water Sprinkler"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -652.8,
+      "left": -537.6,
+      "attrs": { "text": "Sprinkler Node 2" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -556.8,
+      "left": 604.8,
+      "attrs": { "text": "Sprinkler Node 1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -384,
+      "left": 585.6,
+      "attrs": { "text": "Node 1 (N1)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": -422.4,
+      "left": -518.4,
+      "attrs": { "text": "Node 2 (N2)" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text6",
+      "top": 249.6,
+      "left": -240,
+      "attrs": { "text": "Resistor 220 Ohm\n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text7",
+      "top": 508.8,
+      "left": -38.4,
+      "attrs": { "text": "Level Kondisi:\nAman -> Waspada -> Bahaya" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "pot_soil_1:SIG", "esp:D35", "white", [ "v240", "h-710.8", "v86.8" ] ],
+    [ "led_green:A", "esp:D25", "green", [ "v9.6", "h-48", "v-263.9" ] ],
+    [ "led_yellow:A", "esp:D26", "yellow", [ "v9.6", "h-57.6", "v-311.8" ] ],
+    [ "led_red:A", "esp:D27", "red", [ "v9.6", "h-67.2", "v-359.6" ] ],
+    [ "pot_soil_1:VCC", "bb1:tp.25", "red", [ "v96", "h-356", "v-144", "h-124.8" ] ],
+    [ "dht1:VCC", "bb1:tp.24", "red", [ "v48", "h-230.4", "v-144", "h-153.6" ] ],
+    [ "mpu1:VCC", "bb1:tp.23", "red", [ "v75.36", "h-115.52", "v-144", "h-172.8" ] ],
+    [ "gas1:VCC", "bb1:tp.22", "red", [ "v19.2", "h-383.1", "v-144", "h-192" ] ],
+    [ "pot_soil_3:SIG", "esp:D34", "green", [ "v336", "h-0.4", "v24.3" ] ],
+    [ "gas3:VCC", "bb1:tp.1", "red", [ "v9.6", "h221.7", "h65.6" ] ],
+    [ "pot_soil_3:VCC", "bb1:tp.2", "red", [ "v67.2", "h296.8", "v-19.2", "h57.6" ] ],
+    [ "dht3:VCC", "bb1:tp.3", "red", [ "v38.4", "h403.2", "v-38.4", "h67.2" ] ],
+    [ "mpu3:VCC", "bb1:tp.4", "red", [ "v86.4", "h499.12", "v-57.6", "h96" ] ],
+    [ "bb1:bp.15", "esp:3V3", "red", [ "h11.2", "v27.9", "h28.8", "v201.6" ] ],
+    [ "bb1:tn.5", "bb1:bn.11", "black", [ "v19.1", "h78.4" ] ],
+    [ "gas3:AOUT", "esp:D33", "#8f4814", [ "v0" ] ],
+    [ "dht3:SDA", "esp:D14", "orange", [ "v0" ] ],
+    [ "mpu1:SDA", "esp:D21", "violet", [ "v0" ] ],
+    [ "mpu1:SCL", "esp:D22", "blue", [ "v0" ] ],
+    [ "mpu3:SDA", "esp:D21", "violet", [ "v297.6", "h767.92", "v67.2" ] ],
+    [ "mpu3:SCL", "esp:D22", "blue", [ "v307.2", "h767.92", "v38.4" ] ],
+    [ "bz1:1", "esp:GND.2", "black", [ "v57.6", "h-172.8", "v-345.6" ] ],
+    [ "bz1:2", "esp:D19", "green", [ "v19.2", "h297.2", "v-383.9" ] ],
+    [ "gas1:AOUT", "esp:D32", "#8f4814", [ "v134.4", "h-787.2", "v153.7" ] ],
+    [ "dht1:SDA", "esp:D5", "green", [ "v0" ] ],
+    [ "mpu1:AD0", "bb1:tp.23", "gold", [ "v57.6", "h-153.58", "v-144", "h-192" ] ],
+    [ "led_green:C", "r1:2", "black", [ "v19.2", "h-66.8" ] ],
+    [ "r1:1", "bb1:bn.13", "black", [ "h0", "v-259.2", "h134.4" ] ],
+    [ "led_yellow:C", "r2:2", "black", [ "v19.2", "h-76.4" ] ],
+    [ "r2:1", "bb1:bn.12", "black", [ "h0", "v-268.8", "h134.4" ] ],
+    [ "led_red:C", "r3:2", "black", [ "v19.2", "h-86" ] ],
+    [ "r3:1", "bb1:bn.11", "black", [ "h0", "v-278.4", "h134.4" ] ],
+    [ "servo2:V+", "bb1:tp.11", "red", [ "h0" ] ],
+    [ "servo1:V+", "bb1:tp.12", "red", [ "v0.1", "h-510.4" ] ],
+    [ "servo1:GND", "bb1:tn.13", "black", [ "h0" ] ],
+    [ "servo2:GND", "bb1:tn.14", "black", [ "h0" ] ],
+    [ "mpu3:GND", "bb1:1t.e", "black", [ "v0" ] ],
+    [ "dht3:GND", "bb1:1t.d", "black", [ "v0" ] ],
+    [ "gas3:GND", "bb1:1t.c", "black", [ "v0" ] ],
+    [ "mpu3:AD0", "bb1:1t.b", "black", [ "v0" ] ],
+    [ "bb1:1t.a", "bb1:tn.1", "black", [ "v0" ] ],
+    [ "mpu1:GND", "bb1:30t.b", "black", [ "v105.6", "h-163.28", "v-38.4" ] ],
+    [ "dht1:GND", "bb1:30t.c", "black", [ "v76.8", "h-297.6", "v-38.4" ] ],
+    [ "pot_soil_1:GND", "bb1:30t.d", "black", [ "v124.8", "h-374.4", "v-38.4" ] ],
+    [ "gas1:GND", "bb1:30t.e", "black", [ "v86.4", "h-469.6", "v-38.4" ] ],
+    [ "bb1:30t.a", "bb1:tn.25", "black", [ "v0" ] ],
+    [ "bb1:tp.21", "bb1:bp.13", "red", [ "v19.5", "h-94.4" ] ],
+    [ "bb1:tp.5", "bb1:bp.12", "red", [ "v0.3", "h11.2", "v19.2", "h76.8" ] ],
+    [ "bb1:tn.22", "bb1:bn.14", "black", [ "v19.1", "h-94.4" ] ],
+    [ "bb1:bn.15", "esp:GND.1", "black", [ "v27.5", "h30.4", "v182.4" ] ],
+    [ "servo1:PWM", "esp:D18", "violet", [ "h-182.4", "v672.2" ] ],
+    [ "servo2:PWM", "esp:D23", "violet", [ "h68.2", "v-11.6", "h700.8", "v643.1" ] ],
+    [ "bb1:tp.15", "bb1:bp.3", "red", [ "v-47.7", "h-228.8", "v201.6", "h96" ] ],
+    [ "oled1:VCC", "bb1:bp.2", "red", [ "v-48", "h-201.45", "v-297.6", "h57.6" ] ],
+    [ "bb1:bp.1", "esp:VIN", "red", [ "v-0.9", "h-36.8", "v105.6" ] ],
+    [ "oled1:GND", "bb1:2t.e", "black", [ "v-57.6", "h-201.6", "v-364.8", "h57.6" ] ],
+    [ "bb1:2t.a", "bb1:tn.2", "black", [ "v0" ] ],
+    [ "oled1:SDA", "esp:D21", "violet", [ "v-19.2", "h76.87", "v-182" ] ],
+    [ "oled1:SCL", "esp:D22", "blue", [ "v-28.8", "h96.3", "v-201.6" ] ],
+    [ "pot_soil_3:GND", "bb1:2t.d", "black", [ "v0" ] ]
+  ],
+  "serialMonitor": { "display": "auto", "newline": "lf" },
+  "dependencies": {}
+}
